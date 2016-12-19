@@ -2,13 +2,17 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/system/AbstractOdeSystem.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/system/AbstractSecondOrderOdeSystem.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/system/AbstractFirstOrderOdeSystem.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/system/AbstractSecondOrderOdeSystem.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/system/AbstractOdeSystem.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/system/AbstractFirstOrderOdeSystem.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/solver/AbstractOdeSolver.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solver/AbstractFirstOrderOdeSolver.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solver/AbstractFirstOrderOdeSolver.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/solver/AbstractOdeSolver.h" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
