@@ -13,3 +13,4 @@ AbstractOdeSystem::~AbstractOdeSystem() {
 unsigned int AbstractOdeSystem::GetNumberOfStateVariables() const {
     return _numberOfStateVariables;
 }
+

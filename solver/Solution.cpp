@@ -53,18 +53,31 @@ Solution::VectorXd Solution::GetAcceleration(unsigned n) const {
     }
 }
 
-void Solution::SetTime(double &t) {
+void Solution::SetTime(double t) {
     _Times.push_back(t);
+    _NumberOfTimeSteps++;
 }
 
-void Solution::SetDisplacements(Solution::VectorXd &d) {
+void Solution::SetDisplacements(const Solution::VectorXd &d) {
     _Displacements.push_back(d);
 }
 
-void Solution::SetVelocities(Solution::VectorXd &v) {
+void Solution::SetVelocities(const Solution::VectorXd &v) {
     _Velocities.push_back(v);
 }
 
-void Solution::SetAccelerations(Solution::VectorXd &a) {
+void Solution::SetAccelerations(const Solution::VectorXd &a) {
     _Accelerations.push_back(a);
+}
+
+const std::vector<Solution::VectorXd>& Solution::GetVelocities() const {
+    return _Velocities;
+}
+
+const std::vector<Solution::VectorXd>& Solution::GetDisplacements() const {
+    return _Displacements;
+}
+
+std::vector<double> Solution::GetTimes() const {
+    return _Times;
 }

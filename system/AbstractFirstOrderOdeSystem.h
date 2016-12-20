@@ -10,10 +10,11 @@
 #include "eigen3/Eigen/Dense"
 
 class AbstractFirstOrderOdeSystem : public AbstractOdeSystem {
+
+public:
     typedef Eigen::Matrix<double, Eigen::Dynamic, 1> VectorXd;
     typedef Eigen::SparseMatrix<double> SpMat;
-public:
-    AbstractFirstOrderOdeSystem(unsigned int dof);
+    AbstractFirstOrderOdeSystem(unsigned int dof=0);
 
     virtual ~AbstractFirstOrderOdeSystem();
 
@@ -33,7 +34,7 @@ public:
 
     const VectorXd *const GetInitialDisplacement() const { return &_initialDisplacement; }
 
-private:
+protected:
     VectorXd _rF;
     SpMat _lC;
     SpMat _lK;

@@ -9,11 +9,11 @@
 
 
 class AbstractSecondOrderOdeSystem : public AbstractFirstOrderOdeSystem {
-    typedef Eigen::Matrix<double, Eigen::Dynamic, 1> VectorXd;
-    typedef Eigen::SparseMatrix<double> SpMat;
+
 public:
     AbstractSecondOrderOdeSystem(unsigned int dof);
-
+    typedef Eigen::Matrix<double, Eigen::Dynamic, 1> VectorXd;
+    typedef Eigen::SparseMatrix<double> SpMat;
     virtual ~AbstractSecondOrderOdeSystem();
 
     virtual void EvaluateF(double time, const VectorXd &d, const VectorXd &v)=0;

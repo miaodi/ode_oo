@@ -24,9 +24,8 @@ double AbstractOdeSolver::GetEndTime() const {
     return _endTime;
 }
 
-void AbstractOdeSolver::Solve(AbstractOdeSystem &OdeSystem, Solution &solution) {
-    while (_currentTime < _endTime) {
-        SolveByOneStep(OdeSystem, solution);
-    }
+
+double AbstractOdeSolver::GetTimeStep() const {
+    return _timeStep;
 }
 

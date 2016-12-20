@@ -20,13 +20,10 @@ public:
 
     double GetEndTime() const;
 
+    double GetTimeStep() const;
 
 
-    virtual void SolveByOneStep(AbstractOdeSystem &OdeSystem, Solution &solution)=0;
-
-    virtual void Solve(AbstractOdeSystem &OdeSystem, Solution &solution);
-
-private:
+protected:
     double _startTime;
     double _endTime;
     double _currentTime;
