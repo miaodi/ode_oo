@@ -8,12 +8,13 @@
 
 class AbstractOdeSystem {
 public:
-    AbstractOdeSystem(int dof=0);
+    AbstractOdeSystem(unsigned int dof=0);
+
     virtual ~AbstractOdeSystem();
     unsigned int GetNumberOfStateVariables() const;
 
 protected:
-    int _numberOfStateVariables;
+    unsigned int _numberOfStateVariables;
 };
 
 

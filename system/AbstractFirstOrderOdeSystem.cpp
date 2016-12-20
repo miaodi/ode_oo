@@ -15,7 +15,7 @@ AbstractFirstOrderOdeSystem::~AbstractFirstOrderOdeSystem() {
 
 }
 
-void AbstractFirstOrderOdeSystem::SetInitialDisplacement(const AbstractFirstOrderOdeSystem::VectorXd d) {
+void AbstractFirstOrderOdeSystem::SetInitialDisplacement(const AbstractFirstOrderOdeSystem::VectorXd &d) {
     //Need to add assert
     _initialDisplacement = d;
 }

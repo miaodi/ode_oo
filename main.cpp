@@ -1,6 +1,7 @@
 #include <iostream>
-
+#include "solver/Solution.h"
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Solution s;
+
     return 0;
 }

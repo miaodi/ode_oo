@@ -8,8 +8,8 @@ AbstractOdeSolver::~AbstractOdeSolver() {
 
 }
 
-AbstractOdeSolver::AbstractOdeSolver(double sT, double eT, double tI):_startTime(sT),_endTime(eT),_timeStep(tI){
-    _currentTime=_startTime;
+AbstractOdeSolver::AbstractOdeSolver(double sT, double eT, double tI) : _startTime(sT), _endTime(eT), _timeStep(tI) {
+    _currentTime = _startTime;
 }
 
 double AbstractOdeSolver::GetStartTime() const {
@@ -24,8 +24,9 @@ double AbstractOdeSolver::GetEndTime() const {
     return _endTime;
 }
 
-void AbstractOdeSolver::Solve() {
-    while(_currentTime<_endTime){
-        SolveByOneStep();
+void AbstractOdeSolver::Solve(AbstractOdeSystem &OdeSystem, Solution &solution) {
+    while (_currentTime < _endTime) {
+        SolveByOneStep(OdeSystem, solution);
     }
 }
+

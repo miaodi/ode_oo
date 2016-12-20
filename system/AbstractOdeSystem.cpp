@@ -4,7 +4,7 @@
 
 #include "AbstractOdeSystem.h"
 
-AbstractOdeSystem::AbstractOdeSystem(int dof):_numberOfStateVariables(dof)  {
+AbstractOdeSystem::AbstractOdeSystem(unsigned int dof):_numberOfStateVariables(dof)  {
 }
 
 AbstractOdeSystem::~AbstractOdeSystem() {

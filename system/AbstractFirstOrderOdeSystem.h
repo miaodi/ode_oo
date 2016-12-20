@@ -23,13 +23,15 @@ public:
 
     virtual void EvaluateF(double time, const VectorXd &d)=0;
 
-    void SetInitialDisplacement(const VectorXd d);
+    void SetInitialDisplacement(const VectorXd &d);
 
     const SpMat *const GetDampingMatrix() { return &_lC; }
 
     const SpMat *const GetStiffnessMatrix() const { return &_lK; }
 
     const VectorXd *const GetLoadVector() const { return &_rF; }
+
+    const VectorXd *const GetInitialDisplacement() const { return &_initialDisplacement; }
 
 private:
     VectorXd _rF;

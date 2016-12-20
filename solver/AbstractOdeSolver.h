@@ -6,9 +6,10 @@
 #define ODE_OO_ABSTRACTODESOLVER_H
 
 #include "../system/AbstractOdeSystem.h"
+#include "Solution.h"
 
 class AbstractOdeSolver {
-private:
+public:
     AbstractOdeSolver(double sT = 0, double eT = 0, double tI = .1);
 
     virtual ~AbstractOdeSolver();
@@ -19,15 +20,19 @@ private:
 
     double GetEndTime() const;
 
-    virtual void SolveByOneStep()=0;
 
-    virtual void Solve();
+
+    virtual void SolveByOneStep(AbstractOdeSystem &OdeSystem, Solution &solution)=0;
+
+    virtual void Solve(AbstractOdeSystem &OdeSystem, Solution &solution);
 
 private:
     double _startTime;
     double _endTime;
     double _currentTime;
     double _timeStep;
+
+
 };
 
 
